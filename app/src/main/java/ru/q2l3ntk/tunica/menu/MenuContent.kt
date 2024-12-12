@@ -19,10 +19,11 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-@kotlin.OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 internal fun MenuContent(activity: Activity, viewModel: MenuViewModel) {
@@ -52,13 +53,22 @@ internal fun MenuContent(activity: Activity, viewModel: MenuViewModel) {
                 modifier = Modifier.width(300.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = colorScheme.secondary),
                 shape = MaterialTheme.shapes.medium
-            ) { Text(text = "Все сотрудники компании") }
+            ) { Text(text = "Все сотрудники") }
             Button(
                 onClick = { viewModel.launchNewEmployeesScreen(activity) },
                 modifier = Modifier.width(300.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = colorScheme.secondary),
                 shape = MaterialTheme.shapes.medium
-            ) { Text(text = "Добавить сотрудника компании") }
+            ) { Text(text = "Добавить сотрудника") }
         }
     }
+}
+
+@Preview
+@Composable
+internal fun ContentPreview() {
+    MenuContent(
+        activity = MenuActivity(),
+        viewModel = MenuViewModel(),
+    )
 }

@@ -9,7 +9,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import ru.q2l3ntk.tunica.ui.theme.TunicaTheme
 
-class MainActivity : ComponentActivity() {
+class MenuActivity : ComponentActivity() {
     private val viewModel: MenuViewModel = MenuViewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
