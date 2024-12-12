@@ -7,7 +7,7 @@ internal class EmployeeRepository {
     private val faker = Faker.instance()
 
     init {
-
+        employees = createNewEmployees().toMutableList()
     }
 
     fun getAllEmployees(): List<Empolyee> = employees
