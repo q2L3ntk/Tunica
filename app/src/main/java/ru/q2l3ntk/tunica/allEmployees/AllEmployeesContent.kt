@@ -21,6 +21,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.sp
 import ru.q2l3ntk.tunica.data.EmployeeRepository
+import ru.q2l3ntk.tunica.ui.theme.BackgroundC
 import ru.q2l3ntk.tunica.ui.theme.EmployeeContent
 
 @kotlin.OptIn(ExperimentalMaterial3Api::class)
@@ -49,7 +50,8 @@ internal fun AllEmployeesContent(activity: Activity, viewModel: AllEmployeesView
                 },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.secondary)
             )
-        }) { innerPadding ->
+        },  containerColor = BackgroundC
+    ) { innerPadding ->
         val allEmployees = remember { EmployeeRepository().getAllEmployees() }
         LazyColumn(modifier = Modifier.padding(innerPadding)) {
             itemsIndexed(allEmployees) {_, employee ->

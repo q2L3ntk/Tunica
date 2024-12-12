@@ -22,6 +22,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import ru.q2l3ntk.tunica.ui.theme.BackgroundC
 
 @OptIn(ExperimentalMaterial3Api::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -41,7 +42,7 @@ internal fun MenuContent(activity: Activity, viewModel: MenuViewModel) {
                 },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = colorScheme.secondary)
             )
-        }) { innerPadding ->
+        }, containerColor = BackgroundC) { innerPadding ->
         Column(
             modifier = Modifier.fillMaxSize().padding(innerPadding),
             horizontalAlignment = Alignment.CenterHorizontally,

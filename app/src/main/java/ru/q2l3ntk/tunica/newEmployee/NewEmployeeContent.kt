@@ -46,6 +46,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import ru.q2l3ntk.tunica.data.Position
+import ru.q2l3ntk.tunica.ui.theme.BackgroundC
 
 @kotlin.OptIn(ExperimentalMaterial3Api::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -79,7 +80,7 @@ internal fun NewEmployeeContent(activity: Activity, viewModel: NewEmployeeViewMo
                 },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.secondary)
             )
-        }
+        },  containerColor = BackgroundC
     ) { innerPadding ->
         Column(
             modifier = Modifier
