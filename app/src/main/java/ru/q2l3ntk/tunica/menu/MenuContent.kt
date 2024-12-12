@@ -66,7 +66,7 @@ internal fun MenuContent(activity: Activity, viewModel: MenuViewModel) {
 
 @Preview
 @Composable
-internal fun ContentPreview() {
+internal fun MenuContentPreview() {
     MenuContent(
         activity = MenuActivity(),
         viewModel = MenuViewModel(),
